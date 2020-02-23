@@ -1,72 +1,84 @@
 digraph D {
 
-  node [shape=box style=rounded fontname=Arial fontype=bold];
+	node [shape="box" style=rounded fontname=Arial fontype=bold];
 
-  /*
-  n_NAME [ label=<
+	// -- TEMPLATE FOR NODES
+    /*
+    n_NAME [ label=<
     <table border="0" cellborder="0" cellspacing="0">
-      <tr><td align="center"><b>TITLE<br/>TITLE</b></td></tr>
-      <tr><td align="center"><font point-size="8">
-        TEXT<br/>
-        TEXT<br/>
-        TEXT</font></td></tr>
+        <tr><td align="center"><b>TITLE<br/>TITLE2</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			TEXT<br/>
+			TEXT<br/>
+			TEXT</font></td></tr>
     </table>>];
-   */
+	*/
 
   
-  n_money_history [ label=<
+	// -- Classical History of Money
+	n_money_history [ label=<
     <table border="0" cellborder="0" cellspacing="0">
-      <tr><td align="center"><b>classical history<br/>of money</b></td></tr>
-      <tr><td align="center"><font point-size="8">
-        denarius, cowry, rai stones,<br/>
-        cigarette money, paper money, fiat money,<br/>
-        executive order 6102
-        </font></td></tr>  
+		<tr><td align="center"><b>classical history<br/>of money</b></td></tr>
+		<tr><td align="center"><font point-size="8">
+			denarius, cowry, rai stones,<br/>
+			cigarette money, paper money, fiat money,<br/>
+			executive order 6102</font></td></tr>  
     </table>>];
    
-  # FIXME: we should have a chart in the book showing the timeline
-  n_digital_money [ label=<
-    <table border="0" cellborder="0" cellspacing="0">
-      <tr><td align="center"><b>digital money</b></td></tr>
-      <tr><td align="center"><font point-size="8">
-        EUR, USD, money supply,<br/>
-        Sweden heist, in-game money, Digicash, <br/>
-        Bitgold, E-Gold, Liberty Dollar</font></td></tr>
+   
+	// -- Digital Money
+	n_digital_money [ label=<
+	<table border="0" cellborder="0" cellspacing="0">
+		<tr><td align="center"><b>digital money</b></td></tr>
+		<tr><td align="center"><font point-size="8">
+			EUR, USD, money supply,<br/>
+			Sweden heist, in-game money, Digicash,<br/>
+			Bitgold, E-Gold, Liberty Dollar</font></td></tr>
     </table>>];
 
-  n_money_types [ label=<
+
+	// -- Types of Money
+	n_money_types [ label=<
     <table border="0" cellborder="0" cellspacing="0">
-      <tr><td align="center"><b>types of money</b></td></tr>
-      <tr><td align="center"><font point-size="8">
+		<tr><td align="center"><b>types of money</b></td></tr>
+		<tr><td align="center"><font point-size="8">
         commondity, representative, fiat</font></td></tr>
     </table>>];
-
-  n_money_traits [ label=<
+	
+	
+	// -- Traits of Money
+	n_money_traits [ label=<
     <table border="0" cellborder="0" cellspacing="0">
-      <tr><td align="center"><b>classical traits</b></td></tr>
-      <tr><td align="center"><font point-size="8">
-        fungible, portable, durable, divisible,<br/>
-        recognizable, predictable supply</font></td></tr>
+		<tr><td align="center"><b>classical traits</b></td></tr>
+		<tr><td align="center"><font point-size="8">
+			fungible, portable, durable, divisible,<br/>
+			recognizable, predictable supply</font></td></tr>
     </table>>];
 
-  n_money_function [ label=<
+
+	// -- Functions of Money
+	n_money_function [ label=<
     <table border="0" cellborder="0" cellspacing="0">
-      <tr><td align="center"><b>functions<br/>of money</b></td></tr>
-      <tr><td align="center"><font point-size="8">
-        medium of exchange,<br/>
-        store of value,<br/>
-        unit of account</font></td></tr>
+		<tr><td align="center"><b>functions<br/>of money</b></td></tr>
+		<tr><td align="center"><font point-size="8">
+			medium of exchange,<br/>
+			store of value,<br/>
+			unit of account</font></td></tr>
     </table>>];
 
-  n_decentralization [ label=<
+
+	// -- Decentralization
+	n_decentralization [ label=<
     <table border="0" cellborder="0" cellspacing="0">
-      <tr><td align="center"><b>decentralization</b></td></tr>
-      <tr><td align="center"><font point-size="8">
-        centralized vs decentralized systems<br/>
-        examples, single-point of failure, trust issues</font></td></tr>
+		<tr><td align="center"><b>decentralization</b></td></tr>
+		<tr><td align="center"><font point-size="8">
+			meaning, centralized vs decentralized systems,<br/>
+			examples, single-point of failure, trust issues</font></td></tr>
     </table>>];
 
-  n_bitcoin_properties [ label=<
+
+	// Bitcoin: Properties
+	n_bitcoin_properties [ label=<
     <table border="0" cellborder="0" cellspacing="0">
         <tr><td align="center"><b>bitcoin: properties</b></td></tr>
         
@@ -81,16 +93,17 @@ digraph D {
         
         <tr><td align="left"><font point-size="8">
         <b>both: </b>  decentralized, open protocol, open source
-        </font></td></tr>
-        
+        </font></td></tr>        
     </table>>];
+
       
-  n_money_traits_ext [ label=<
+	// Extended Traits of Money
+	n_money_traits_ext [ label=<
     <table border="0" cellborder="0" cellspacing="0">
-      <tr><td align="center"><b>extended traits</b></td></tr>
-      <tr><td align="center"><font point-size="8">
-        sovereign (government issued),<br/>
-        decentralized, smart (programmable)</font></td></tr>
+		<tr><td align="center"><b>extended traits</b></td></tr>
+		<tr><td align="center"><font point-size="8">
+			sovereign (government issued),<br/>
+			decentralized, smart (programmable)</font></td></tr>
     </table>>];
     
     
@@ -99,13 +112,14 @@ digraph D {
     n_history_of_Bitcoin
     
     # FIXME:   (stuff that comes to my mind)
-    # * Ryan's traits of money: he explains why he calls it traits instead of characteristics
+    # * Ryan"s traits of money: he explains why he calls it traits instead of characteristics
     #   https://rywalk.wordpress.com/2015/01/16/ryans-traits-of-money-series-part-i/
     #   we also should credit his work and/or ask for permission to use his chart
     # fiXME: transaction capacity limitd due to block size
     # fixme: block size => market 
                # without explaining where this is coming from
     # fIXME: based on the properties of mathematics rather than relying on physical properties (like gold and silver) or trust in central authorities (like fiat currencies)
+	  # FIXME: we should have a chart in the book showing the timeline  (digital money)
 
   a6   [label="comparison:\nFiat/USD, Gold,\nBitcoin"]
 
@@ -114,7 +128,7 @@ digraph D {
   a10  [label="example:\ncheque double spend"]
   
   b1   [label="bitcoin network\n(nodes & tokens)"]
-  b2   [label="node: don't trust. verify."]
+  b2   [label="node: don"t trust. verify."]
   b3   [label="example:\nBitcoin\ndouble spend"]
   b4   [label="candidate block\nproduction\nand rules"]            # candidtate block
   
