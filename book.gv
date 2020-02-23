@@ -108,6 +108,12 @@ digraph D {
     
     
     
+	
+	
+	
+	
+	
+	
     
     n_history_of_Bitcoin
     
@@ -128,7 +134,7 @@ digraph D {
   a10  [label="example:\ncheque double spend"]
   
   b1   [label="bitcoin network\n(nodes & tokens)"]
-  b2   [label="node: don"t trust. verify."]
+  b2   [label="node: don't trust. verify."]
   b3   [label="example:\nBitcoin\ndouble spend"]
   b4   [label="candidate block\nproduction\nand rules"]            # candidtate block
   
