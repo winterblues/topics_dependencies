@@ -3,7 +3,9 @@ digraph D {
 	node [shape="box" style=rounded fontname=Arial fontype=bold];
 
 	// -- TEMPLATE FOR NODES
-    /*
+    /**
+	
+	// -- DESCRIPTION
     n_NAME [ label=<
     <table border="0" cellborder="0" cellspacing="0">
         <tr><td align="center"><b>TITLE<br/>TITLE2</b></td></tr>
@@ -12,6 +14,7 @@ digraph D {
 			TEXT<br/>
 			TEXT</font></td></tr>
     </table>>];
+	
 	*/
 
   
@@ -107,7 +110,26 @@ digraph D {
     </table>>];
     
     
-    
+	// Traits of Money (Comparison)
+    n_traits_comparison [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>traits of money<br/>(comparison)</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			table: Fiat (USD), Gold, Bitcoin;<br/>
+			conclusion: Bitcoin is a very well<br/>
+			designed form of money</font></td></tr>
+    </table>>];
+	
+	
+	// -- Payment System
+    n_payment_system [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>payment system</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			money vs payment system, definition,<br/>
+			examples: cash, cheque, wire, credit card<br/>
+			special: Rai stones</font></td></tr>
+    </table>>];
 	
 	
 	
@@ -116,6 +138,8 @@ digraph D {
 	
     
     n_history_of_Bitcoin
+	n_consensus_mechanism
+	
     
     # FIXME:   (stuff that comes to my mind)
     # * Ryan"s traits of money: he explains why he calls it traits instead of characteristics
@@ -126,10 +150,11 @@ digraph D {
                # without explaining where this is coming from
     # fIXME: based on the properties of mathematics rather than relying on physical properties (like gold and silver) or trust in central authorities (like fiat currencies)
 	  # FIXME: we should have a chart in the book showing the timeline  (digital money)
+	  # consensus mechanism: Rai stones   
 
-  a6   [label="comparison:\nFiat/USD, Gold,\nBitcoin"]
+  
 
-  n_payment_system   [label="payment system"]
+  
   a9   [label="double spend"]
   a10  [label="example:\ncheque double spend"]
   
@@ -156,7 +181,7 @@ digraph D {
   n_money_function -> n_money_traits 
   n_money_traits -> n_money_traits_ext
   n_bitcoin_properties -> n_money_traits_ext
-  n_money_traits_ext -> a6
+  n_money_traits_ext -> n_traits_comparison
   n_decentralization -> n_bitcoin_properties
   n_digital_money -> n_decentralization
   n_payment_system -> a9 -> a10
