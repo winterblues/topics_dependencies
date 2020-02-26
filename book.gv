@@ -126,19 +126,27 @@ digraph D {
     <table border="0" cellborder="0" cellspacing="0">
         <tr><td align="center"><b>payment system</b></td></tr>
         <tr><td align="center"><font point-size="8">
-			money vs payment system, definition,<br/>
+			money vs payment system, definition<br/>
 			examples: cash, cheque, wire, credit card<br/>
 			special: Rai stones</font></td></tr>
     </table>>];
 	
 	
+	// -- Double Spend
+    n_doulbe_spend [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>double spend</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			definition, example</font></td></tr>
+    </table>>];
 	
-	
+
 	
 	
     
-    n_history_of_Bitcoin
-	n_consensus_mechanism
+    #n_history_of_Bitcoin
+	#n_consensus_mechanism
+	#n_public_private_key
 	
     
     # FIXME:   (stuff that comes to my mind)
@@ -155,7 +163,7 @@ digraph D {
   
 
   
-  a9   [label="double spend"]
+  
   a10  [label="example:\ncheque double spend"]
   
   b1   [label="bitcoin network\n(nodes & tokens)"]
@@ -184,7 +192,7 @@ digraph D {
   n_money_traits_ext -> n_traits_comparison
   n_decentralization -> n_bitcoin_properties
   n_digital_money -> n_decentralization
-  n_payment_system -> a9 -> a10
+  n_payment_system -> n_doulbe_spend -> a10
   n_money_history -> n_digital_money
   
   n_payment_system -> n_bitcoin_properties
