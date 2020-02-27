@@ -207,7 +207,7 @@ digraph D {
     // -- Digital Signature (Simple)
     n_digital_signature_simple [ label=<
     <table border="0" cellborder="0" cellspacing="0">
-        <tr><td align="center"><b>digital signature<br/>(simple)</b></td></tr>
+        <tr><td align="center"><b>digital signature<br/>(simplified)</b></td></tr>
         <tr><td align="center"><font point-size="8">
 			public/private key, properties (only valid for<br/>
 			that tx), create signature (priv key, msg),<br/>
@@ -218,7 +218,7 @@ digraph D {
     // -- Distributed Network
     n_distributed_network [ fillcolor="#e0e0e0" style="rounded,filled" label=<
     <table border="0" cellborder="0" cellspacing="0">
-        <tr><td align="center"><b>distributed payment<br/>network (simple)</b></td></tr>
+        <tr><td align="center"><b>distributed payment<br/>network (simplified)</b></td></tr>
         <tr><td align="center"><font point-size="8">
             (to explain basic concepts)<br/>
 			distributed ledger, sending money, nodes,<br/>
@@ -226,8 +226,28 @@ digraph D {
     </table>>];
     
 
-    
+    // -- Public Key Cryptography
+    n_public_key_cryptography [ fillcolor="#e0e0e0" style="rounded,filled" label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>public-key<br/>cryptography</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+            public, private keys, one-way- functions,<br/>
+			use cases: message encryption, authentication<br/></font></td></tr>
+    </table>>];
 
+
+    // -- Public-Key Crypto (Examples)
+    n_public_key_crypto_examples [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>public-key<br/>cryptography (examples)</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			example: color mixing,<br/>
+			example: ellipitc-curve cryptography,</font></td></tr>
+    </table>>];
+    
+    n_public_key_cryptography -> n_public_key_crypto_examples
+    
+    
     #n_history_of_Bitcoin
 	#n_consensus_mechanism
 	#n_public_private_key
@@ -293,6 +313,8 @@ digraph D {
     n_hashfunction -> n_hashfunction_use_cases
   
 
+    
+    
 }
 
 
