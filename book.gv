@@ -19,7 +19,7 @@ digraph D {
 
   
 	// -- Classical History of Money
-	n_money_history [ label=<
+	n_money_history [ fillcolor="#e0e0e0" style="rounded,filled" label=<
     <table border="0" cellborder="0" cellspacing="0">
 		<tr><td align="center"><b>classical history<br/>of money</b></td></tr>
 		<tr><td align="center"><font point-size="8">
@@ -122,31 +122,117 @@ digraph D {
 	
 	
 	// -- Payment System
-    n_payment_system [ label=<
+    n_payment_system [ fillcolor="#e0e0e0" style="rounded,filled" label=<
     <table border="0" cellborder="0" cellspacing="0">
         <tr><td align="center"><b>payment system</b></td></tr>
         <tr><td align="center"><font point-size="8">
 			money vs payment system, definition<br/>
 			examples: cash, cheque, wire, credit card<br/>
-			special: Rai stones</font></td></tr>
+			special example: Rai stones</font></td></tr>
     </table>>];
 	
 	
-	// -- Double Spend
+	// -- Double Spend (Centralized)
     n_doulbe_spend [ label=<
     <table border="0" cellborder="0" cellspacing="0">
-        <tr><td align="center"><b>double spend</b></td></tr>
+        <tr><td align="center"><b>double spend<br/>(centralized)</b></td></tr>
         <tr><td align="center"><font point-size="8">
-			definition, example</font></td></tr>
+			definition, example (cheque fraud),<br/>
+			time-order</font></td></tr>
     </table>>];
 	
 
+	// -- Double Spend (Decentralized)
+    n_double_spend_decentral [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>double spend<br/>(decentralized)</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			example: double spending in a<br/>
+			decentralized network,<br/>
+			time-order</font></td></tr>
+    </table>>];
+
+
+	// -- Cryptographic Hashfunction
+    n_hashfunction [ fillcolor="#e0e0e0" style="rounded,filled" label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>cryptographic<br/>hashfunction</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			properties, example ("the red fox"),<br/>
+			digest</font></td></tr>
+    </table>>];
+
+
+    // -- SHA 256
+    n_sha256 [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>sha256</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			example: sha256 (in detail)<br/>
+			(appendix)</font></td></tr>
+    </table>>];
+
 	
-	
+    // -- Hashfunction Use Cases
+    n_hashfunction_use_cases [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>use cases of<br/>hashfunctions</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			store passwords, verify data,<br/>
+			commitment scheme</font></td></tr>
+    </table>>];
+
+
+    // -- Security Considerations
+    n_security_considerations [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>security<br/>considerations</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			potential attacks on Bitcoin include:<br/>
+			unauthorized spending,<br/>
+			double spending</font></td></tr>
+    </table>>];
+
+
+    // -- Authentication (Simple Solution)
+    n_authentication_simple [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>authentication<br/>(simple solution)</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			authentication of transactions by using<br/>
+			digital signatures, properties</font></td></tr>
+    </table>>];
     
+    
+    // -- Digital Signature (Simple)
+    n_digital_signature_simple [ label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>digital signature<br/>(simple)</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+			public/private key, properties (only valid for<br/>
+			that tx), create signature (priv key, msg),<br/>
+			verify signature (signature, msg, pub key)</font></td></tr>
+    </table>>];
+
+    
+    // -- Distributed Network
+    n_distributed_network [ fillcolor="#e0e0e0" style="rounded,filled" label=<
+    <table border="0" cellborder="0" cellspacing="0">
+        <tr><td align="center"><b>distributed payment<br/>network (simple)</b></td></tr>
+        <tr><td align="center"><font point-size="8">
+            (to explain basic concepts)<br/>
+			distributed ledger, sending money, nodes,<br/>
+			communication between nodes</font></td></tr>
+    </table>>];
+    
+
+    
+
     #n_history_of_Bitcoin
 	#n_consensus_mechanism
 	#n_public_private_key
+	
+	# proof-of-work   hashcash!
 	
     
     # FIXME:   (stuff that comes to my mind)
@@ -160,21 +246,21 @@ digraph D {
 	  # FIXME: we should have a chart in the book showing the timeline  (digital money)
 	  # consensus mechanism: Rai stones   
 
-  
+    # finney attack
+    # bitcoin is trustless
+    # chain reorg / reorder
 
   
   
-  a10  [label="example:\ncheque double spend"]
-  
-  b1   [label="bitcoin network\n(nodes & tokens)"]
-  b2   [label="node: don't trust. verify."]
-  b3   [label="example:\nBitcoin\ndouble spend"]
-  b4   [label="candidate block\nproduction\nand rules"]            # candidtate block
   
   
-  b5   [label="cryptographic\nhashfunctions"]
-  b6a  [label="example: sha56\nAppendix"]
-  b6b  [label="use cases of\nhashfunctions"]  # hashcash!
+  #b1   [label="bitcoin network\n(nodes & tokens)"]
+  #b2   [label="node: don't trust. verify."]
+  #b4   [label="candidate block\nproduction\nand rules"]            # candidtate block
+  
+  
+
+  
   
 
   # block header
@@ -183,24 +269,30 @@ digraph D {
   
   #b   [label="proof-of-work"]
   
-  n_money_history -> n_money_traits
-  n_money_history -> n_money_function
-  n_money_history -> n_money_types 
-  n_money_function -> n_money_traits 
-  n_money_traits -> n_money_traits_ext
-  n_bitcoin_properties -> n_money_traits_ext
-  n_money_traits_ext -> n_traits_comparison
-  n_decentralization -> n_bitcoin_properties
-  n_digital_money -> n_decentralization
-  n_payment_system -> n_doulbe_spend -> a10
-  n_money_history -> n_digital_money
+    n_money_history -> n_money_traits
+    n_money_history -> n_money_function
+    n_money_history -> n_money_types 
+    n_money_function -> n_money_traits 
+    n_money_traits -> n_money_traits_ext
+    n_bitcoin_properties -> n_money_traits_ext
+    n_money_traits_ext -> n_traits_comparison
+    n_decentralization -> n_bitcoin_properties
+    n_digital_money -> n_decentralization
+    n_money_history -> n_digital_money
+    n_payment_system -> n_bitcoin_properties
+    n_payment_system -> n_doulbe_spend 
+    n_doulbe_spend -> n_double_spend_decentral
+    n_double_spend_decentral -> n_security_considerations
+    n_security_considerations -> n_authentication_simple 
+    n_distributed_network -> n_double_spend_decentral
+    n_distributed_network -> n_digital_signature_simple
+    n_digital_signature_simple -> n_authentication_simple
   
-  n_payment_system -> n_bitcoin_properties
   
-  b1 -> b2 -> b3 -> b4
-  b5 -> b6a
-  b5 -> b6b
-  a9 -> b3
+    n_hashfunction -> n_sha256
+    n_hashfunction -> n_hashfunction_use_cases
+  
+
 }
 
 
